@@ -7,24 +7,24 @@
 # date: 09/02/13
 #
 #######################################
-import simplejson as json				# JSON parser library
-import MySQLdb as mysql					# MySQL connect library
-import fileinput						# For accepting stdin via pipe
-import time								# Timing component
+import simplejson as json			# JSON parser library
+import MySQLdb as mysql				# MySQL connect library
+import fileinput				# For accepting stdin via pipe
+import time					# Timing component
 from sys import stdout, exit			# System functions
 from warnings import filterwarnings		# Filter MySQL warnings
 
 # Variables
-i = 0					# Loop counter
-t = 0					# Transaction counter
-data_list = []			# Data entry list
-bulk_limit = 10000		# Data list length limit
-default_int = "0"		# Default return for null int
-default_str = ""		# Default return for null string
+i = 0			# Loop counter
+t = 0			# Transaction counter
+data_list = []		# Data entry list
+bulk_limit = 10000	# Data list length limit
+default_int = "0"	# Default return for null int
+default_str = ""	# Default return for null string
 db_host = "localhost"	# MySQL server
-db_user = "snooper"		# MySQL user account
+db_user = "snooper"	# MySQL user account
 db_pass = "password"	# MySQL user account password
-db_name = "snooper"		# MySQL database name
+db_name = "snooper"	# MySQL database name
 db_tbl = "server_data"	# MySQL table name
 
 # Setup initial database connection
